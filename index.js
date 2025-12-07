@@ -1,4 +1,6 @@
-// variables and constants 
+// variables and constants
+
+// "use strict" for a using a 
 
 let name="diagmbar "
  
@@ -9,4 +11,14 @@ var collage="indira collage "
 let course=true;
 
 
-console.table([name,gmail,collage,course]) // can use to console multiple values at once 
+// console.table([name,gmail,collage,course]) // can use to console multiple values at once 
+
+
+
+let city=null
+let pincode
+
+console.log(typeof(city)) // object 
+console.log(typeof(pincode)) // undefined 
+
+
