@@ -31,4 +31,31 @@ true=> 1 , false=> 0
 ### in string 
 let number =33
 let numberInString=String(number)
- 
+
+## operations in js 
+
+```js
+console.log("1"+3) // 13 
+console.log(4+"3")  // 43
+console.log(1+5+"4")  // frist 5+1=6 amd then +4 =64  beacuse the number comes frist and then string comes last 
+console.log("1"+5+4) // add all considering as a string beacuse the string comes frist 
+
+```
+## comparison in js 
+
+1. = this is a assignment operator
+2. == this is a comparison operator 
+3. === strict check . comparison operator check for value as well as daatatypes also 
+
+```js
+console.log(1>2)
+console.log(1<=2)
+console.log(1!=2)
+console.log(1!="2")  // here during a comparison js convert the string to number automatically 
+console.log("1"!=2)
+
+
+console.log(null>0)
+console.log(null==0)
+console.log(null>=0)
+```
