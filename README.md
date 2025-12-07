@@ -17,3 +17,18 @@
 6. undifined => type of undefined is undefined  
 7. symbol
 8. object 
+
+## conversion of datatype in js 
+### in number (Number)
+"33"=> 33
+"33abr"=> NaN
+true=> 1 , false=> 0
+ 
+### in boolean (Boolean)
+""=> false 
+" digambar "=> true 
+
+### in string 
+let number =33
+let numberInString=String(number)
+ 

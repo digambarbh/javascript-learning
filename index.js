@@ -15,10 +15,15 @@ let course=true;
 
 
 
-let city=null
-let pincode
+// let city=null
+// let pincode
 
-console.log(typeof(city)) // object 
-console.log(typeof(pincode)) // undefined 
+// console.log(typeof(city)) // object 
+// console.log(typeof(pincode)) // undefined 
 
+
+
+let number=33
+let stringNumber=String(number)
+console.log(typeof stringNumber)
 
