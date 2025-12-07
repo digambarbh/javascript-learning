@@ -59,3 +59,19 @@ console.log(null>0)
 console.log(null==0)
 console.log(null>=0)
 ```
+
+
+## non primtive datatypes in js 
+1. Array
+   ```js
+   let student=["digambar "," krish","pratik"]
+   ```
+
+2. Object 
+```js
+let obj={
+    name:"digambar".
+    class:" bsc computer science ",
+    age:"21"
+}
+```

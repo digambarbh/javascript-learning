@@ -36,16 +36,21 @@ let number=33
 //  comparisons in js 
 
 
-console.log(1>2)
-console.log(1<=2)
-console.log(1!=2)
-console.log(1!="2")  // here during a comparison js convert the string to number automatically 
-console.log("1"!=2)
+// console.log(1>2)
+// console.log(1<=2)
+// console.log(1!=2)
+// console.log(1!="2")  // here during a comparison js convert the string to number automatically 
+// console.log("1"!=2)
 
 
-console.log(null>0)
-console.log(null==0)
-console.log(null>=0)
+// console.log(null>0)
+// console.log(null==0)
+// console.log(null>=0)
 
 
+// let id=Symbol("1024")
+// console.log( typeof id)
+
+
+// array
 
