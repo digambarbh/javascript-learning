@@ -2,7 +2,7 @@
 
 // "use strict" for a using a 
 
-let name="diagmbar "
+// let name="diagmbar "
  
 const gmail="digambarb18@gmail.com"
 
@@ -52,5 +52,9 @@ let number=33
 // console.log( typeof id)
 
 
-// array
+//hoisting
 
+var name;
+console.log(name);
+name="digambar";
+console.log(name)

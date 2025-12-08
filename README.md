@@ -75,3 +75,13 @@ let obj={
     age:"21"
 }
 ```
+## Hoisting 
+
+decleration of the variable and function ios moved to the top of their scope (global or block )
+only variable is moves to the top not value 
+```js
+var name;
+console.log(name);// undefined 
+name="digambar";
+console.log(name) //digambar 
+```
