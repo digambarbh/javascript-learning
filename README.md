@@ -85,3 +85,52 @@ console.log(name);// undefined
 name="digambar";
 console.log(name) //digambar 
 ```
+
+
+## memory in js 
+ stack memory is used wneh we use a primitive datatype 
+ heap memory is usd when we use a non-primitive datatype 
+
+ ## variable naming rule in js 
+
+ 1. name must start with a _,letter or $ sign 
+ 2. case sensitive 
+ 3. no space allowed in variable nmae
+ 4. cannot use reserved keyword 
+
+
+## String in js 
+
+decleration we can delcare using single quote or double quuote or making a tremplate litral 
+```js
+let name="digambar";
+let adress=` my name is ${name} and i am from ahilyanagar`;
+
+// string length calculate 
+
+console.log(name.length)
+
+// access individual character of string using a indexing 
+
+console.log(name[4]);
+
+// making a uppercase and lowercase 
+
+name.toUpperCase();
+name.toLowrCase();
+
+// trim method to remove a space from both side 
+
+"      this is a        ".trim();
+
+// slicing a string means a storing or displaying a some part of the string 
+
+console.log(name.slice(1,5)) // it print a name fron index 1 till index 4 not include the last index 
+
+
+// substring (looks similer like a slice but here we cant use a negative indexes if uses it treart like a 0)
+
+name.substring(-5,4) // here -5 treat like a 0 and it return a 0 to 4 
+
+
+```
