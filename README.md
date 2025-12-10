@@ -192,3 +192,65 @@ parseInt("44px") // 44
 parseFloat("3.14")  // 3.14 
 ```
 ### strings are immutable every method returns new string original string never changed 
+
+
+## Symbols
+helps to create hidden , non colliding object keys 
+```js
+Symbol("a")===Symbol("a") // false beacuse it create uniqu value every time even with sane decscription 
+
+let secret = Symbol("secretKey");
+
+let user = {
+    name: "Digambar",
+    [secret]: "This is hidden"
+};
+
+```
+
+## Object datatype in js 
+
+### objects are mutable 
+it is a collection of the key value pairs 
+like name:"digambar",age:20 here key is name and age and values are digambar and 20 
+keys are also called properties 
+```js
+
+let user={
+    name:"digambar",
+    age:20,
+    password:"this@123"
+}
+
+let obj=new Object(); // object is declerd we can add properties letter like obj.name="your_name"
+
+```
+
+### Constructor function
+it is a like a blueprint to object . it is used to create and initlize the object 
+```js
+
+function person(name,age){
+    this.name=name,
+    this.age=age,
+    this.greet=function(){
+        console.log(`Hello i am ${this.name}`)
+    }
+}
+
+
+// Creating a instances of this function 
+
+
+const person1=new person("digambar",25)
+
+console.log(person1.greet());
+
+
+
+// adding new properties to object 
+
+person["isPassed"]=true;
+
+
+```

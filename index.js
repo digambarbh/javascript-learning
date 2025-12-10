@@ -73,10 +73,42 @@ let string=`this is student from a ${student} who score ${20+50} marks`
 
 // console.log(name.repeat(100))
 
-let name="digambar"
-let surname="bhujbal"
+// let name="digambar"
+// let surname="bhujbal"
 
-console.log(name.concat(" ",surname));
+// console.log(name.concat(" ",surname));
 
+
+
+
+// Object in js 
+
+
+// creation of the object 
+
+let user={
+    name:"digambar",
+    age:20,
+    password:"this@123"
+}
+
+let obj=new Object(); // object is declerd we can add properties letter like obj.name="your_name"
+
+// Constructor function 
+
+function person(name,age){
+    this.name=name,
+    this.age=age,
+    this.greet=function(){
+        console.log(`Hello i am ${this.name}`)
+    }
+}
+
+// Creating a instances of this function 
+
+
+const person1=new person("digambar",25)
+
+console.log(person1.greet());
 
 
