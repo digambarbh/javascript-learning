@@ -133,4 +133,62 @@ console.log(name.slice(1,5)) // it print a name fron index 1 till index 4 not in
 name.substring(-5,4) // here -5 treat like a 0 and it return a 0 to 4 
 
 
+// repalcing a some part of the string using .replace(searchValue,replaceValue )
+// this replace the frist match of substring 
+
+
+" Apple Apple ".replace("Apple","Mango") // here we are replacing a Apple with Mango 
+// result is " Mango Apple "
+
+// replace all works like a replace but it replace all occurance of the substring 
+ " Apple Apple orange ".replaceAll("Apple"," Mango")// result is " Mango Mango orange "
+
+ // .split(seprator , limit?)
+// this convert the string to an arary 
+
+"digambar bhujbal".split(" "); // ["digambar","bhujbal"] string is seprated from a space 
+
+"love".split(""); //["","o","v","e"] 
+
+"love".split("",2) //["l","o"] limit is passed so it return according to limit 
+
+// includes(substring , fromIndex?) it checks if substring exists and return true or false 
+
+
+"lucifer".includes("cife"); // true
+"lucifer".includes("Cife"); // false (case-sensitive)
+
+"lucifer".includes("ife",2); // false form index defines where to search in string 
+
+// repeat(count)  repeat the string multiple times 
+// count must be >=0 
+console.log(name.repeat(100))
+
+// concat (srt1,str2,....) joins multiple strings 
+let name="digambar"
+let surname="bhujbal"
+
+console.log(name.concat(" ",surname));
+
+// indexOf (searchValue , fromIndex?)
+// used to search the first index of the substring 
+
+"digambar".indexOf("g") // it return the 2 
+"digambar".indexOf("g",4) //  astart searching from the 4th index if not found return -1 
+
+
+//lastIndexOf(searchValue,fronIndex?) it finds the last occurance of the substring 
+
+"banana".lastIndexOf("a") // 5 other things same as indexOf()
+
+// startsWith(searchString,position)
+
+//endsWith(searchString,positon)
+
+// Converting string to a number 
+
+Number("46") // it returns the number 46
+parseInt("44px") // 44 
+parseFloat("3.14")  // 3.14 
 ```
+### strings are immutable every method returns new string original string never changed 

@@ -54,10 +54,10 @@ let number=33
 
 //hoisting
 
-var name;
-console.log(name);
-name="digambar";
-console.log(name)
+// var name;
+// console.log(name);
+// name="digambar";
+// console.log(name)
 
 // string in js 
 
@@ -66,4 +66,17 @@ let student="indira collage student"; // decleration of string
 // another spacial type of string is called templete litral this allows to use a variables , expression or a multipleline string 
 
 let string=`this is student from a ${student} who score ${20+50} marks`
+
+
+
+// console.log(name.split("",4));
+
+// console.log(name.repeat(100))
+
+let name="digambar"
+let surname="bhujbal"
+
+console.log(name.concat(" ",surname));
+
+
 
