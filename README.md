@@ -253,4 +253,24 @@ console.log(person1.greet());
 person["isPassed"]=true;
 
 
+
+// deleting the properties of the objects 
+delete person1.age;
+
+
+// so objecrs are mutable 
+
+person1.age=40;
+
 ```
+
+
+### common object methods 
+1. object.key(obj)           it returns the keys from the object
+2. object.value(obj)         it returns the values from the object 
+3. object.entries(obj)       returns array of  key value pairs 
+4. object.fromEntries(arr)   turn array of key value pairs back into object 
+5. spread operator           creates a copy of a original array or object [...arr1]
+6. object.freeze(obj)        freeze the object cannot delete add or modify 
+7. object.seal()             cannot add or delete properties but existing can modify 
+   

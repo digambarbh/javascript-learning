@@ -109,6 +109,18 @@ function person(name,age){
 
 const person1=new person("digambar",25)
 
-console.log(person1.greet());
+// console.log(person1.greet());
 
+
+
+
+console.log("digambar"-100);
+
+
+
+// deleting the properties of the objects 
+// delete person1.age;
+
+
+console.log(Object.keys(person1))
 
