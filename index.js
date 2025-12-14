@@ -61,11 +61,11 @@ let number=33
 
 // string in js 
 
-let student="indira collage student"; // decleration of string 
+// let student="indira collage student"; // decleration of string 
 
 // another spacial type of string is called templete litral this allows to use a variables , expression or a multipleline string 
 
-let string=`this is student from a ${student} who score ${20+50} marks`
+// let string=`this is student from a ${student} who score ${20+50} marks`
 
 
 
@@ -124,3 +124,30 @@ console.log("digambar"-100);
 
 console.log(Object.keys(person1))
 
+
+
+// looping through the object 
+
+let student={
+    name:"digmbar",
+    age:21,
+    course:"bsc computer science"
+}
+
+
+// for in loop 
+// for(key in student){
+//     console.log(key,":",student[key]);
+// }
+
+
+// for of loop 
+
+for(let[key,value] of Object.entries(student)){
+    console.log(key,value)
+}
+
+
+
+
+// object destructring 

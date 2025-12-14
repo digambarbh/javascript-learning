@@ -273,4 +273,13 @@ person1.age=40;
 5. spread operator           creates a copy of a original array or object [...arr1]
 6. object.freeze(obj)        freeze the object cannot delete add or modify 
 7. object.seal()             cannot add or delete properties but existing can modify 
+
+### looping through the object 
+1. for in loop 
+   iterates over enumeral property keys
+
+2. for of loop
+   iterates over itreable values 
    
+### object destructring 
+extract value from object and assign them to a vairable in a very consice way 
