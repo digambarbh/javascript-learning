@@ -283,3 +283,24 @@ person1.age=40;
    
 ### object destructring 
 extract value from object and assign them to a vairable in a very consice way 
+```js
+// without destructring 
+let student={
+    name:"disgambar",
+    course:"bsc computer science"
+}
+
+let name=student.name;
+let course=student.course;
+
+
+// using destructring 
+let student={
+    name:"disgambar",
+    course:"bsc computer science"
+}
+
+let {name,course}=student
+
+
+```

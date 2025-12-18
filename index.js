@@ -131,7 +131,7 @@ console.log(Object.keys(person1))
 let student={
     name:"digmbar",
     age:21,
-    course:"bsc computer science"
+    coursse:"bsc computer science"
 }
 
 
@@ -146,6 +146,11 @@ let student={
 for(let[key,value] of Object.entries(student)){
     console.log(key,value)
 }
+
+
+let {name,age,coursse}=student
+console.log("getting the course")
+console.log(coursse)
 
 
 
