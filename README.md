@@ -304,3 +304,19 @@ let {name,course}=student
 
 
 ```
+
+### methods inside object 
+```js
+const chor={
+    work:"robbery",
+    chori(){
+        console.log("robbery sucessful")
+    }
+}
+
+chor.chori()
+
+// here chori is a method inside a chor object 
+
+
+```

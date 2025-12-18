@@ -30,3 +30,13 @@ for(key in customer){
     console.log(key);
     
 }
+
+
+const chor={
+    work:"robbery",
+    chori(){
+        console.log("robbery sucessful")
+    }
+}
+
+chor.chori()
