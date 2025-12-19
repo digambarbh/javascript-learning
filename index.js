@@ -155,4 +155,71 @@ console.log(coursse)
 
 
 
-// object destructring 
+
+
+const chor={
+    work:"robbery",
+    chori(){
+        console.log("robbery sucessful")
+        console.log("our work is "+this.work) // here this refers to the object chori 
+    }
+}
+chor.chori()
+
+
+// object prototype 
+
+// const bscClass={
+//     students:80,
+//     subjects:["dbms","python","js"],
+//     getAttendance(){
+//         console.log("everyone is present")
+//     },
+//     classStartAt:10,
+//     classEndAt:2
+
+// }
+
+// const divA=Object.create(bscClass)
+
+// divA.getAttendance()
+
+
+// prptotyping using  constructor fucntion 
+
+function bscClass(division){
+    this.students=80,
+    this.students=["dbms","python","js"],
+    this.division=division || ""
+}
+bscClass.prototype.getAttendance=function(){
+    console.log("koi nahi aayega class mai ")
+}
+
+const divA=new bscClass("A")
+divA.getAttendance();
+
+
+// protptypal inheritance in  js 
+
+
+let animal={
+    eats:true,
+    reproduce:true,
+    walks(){
+        console.log("animal is running ")
+    }
+}
+
+const dog={
+    name:"tommy",
+    __proto__:animal,// this means a dog is the prototype of animal so it can access animal all properties 
+
+}
+dog.walks()
+// there are ways to get the properties of the base object 
+/*
+constructor function
+object.create() meathod 
+__proto__ prototype asseccer 
+*/

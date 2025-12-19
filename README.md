@@ -318,5 +318,41 @@ chor.chori()
 
 // here chori is a method inside a chor object 
 
+```
+### this keyword 
+inside a  method this refers to the object that called it .
+```js
+
+const chor={
+    work:"robbery",
+    chori(){
+        console.log("robbery sucessful")
+        console.log("our work is "+this.work) // here this refers to the object chori 
+    }
+}
+chor.chori()
 
 ```
+### object prototype 
+```js 
+const bscClass={
+    students:80,
+    subjects:["dbms","python","js"],
+    getAttendance(){
+        console.log("everyone is present")
+    },
+    classStartAt:10,
+    classEndAt:2
+
+}
+
+const divA=Object.create(bscClass)
+
+divA.getAttendance()
+
+```
+
+
+### prototypal inheritance 
+
+this is the js core inheritance model where object inherit directly from other object 
