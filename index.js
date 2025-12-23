@@ -223,3 +223,5 @@ constructor function
 object.create() meathod 
 __proto__ prototype asseccer 
 */
+
+console.log(typeof(dog))
