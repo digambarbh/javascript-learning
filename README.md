@@ -327,7 +327,7 @@ const chor={
     work:"robbery",
     chori(){
         console.log("robbery sucessful")
-        console.log("our work is "+this.work) // here this refers to the object chori 
+        console.log("our work is "+this.work) // here this refers to the object chor
     }
 }
 chor.chori()
@@ -356,3 +356,133 @@ divA.getAttendance()
 ### prototypal inheritance 
 
 this is the js core inheritance model where object inherit directly from other object 
+```js
+const animal={
+    eats:true,
+    runs(){
+        consol.log("animal runs")
+    }
+}
+
+const rabbit={
+    isveg:true,
+    __proto__:animal
+}
+
+console.log(rabbit.eats)         //true
+
+rabbit.runs()           //animal runs
+
+
+
+
+// modern approach for this is 
+
+const rabbit=Object.create(animal)
+rabbit.isveg=true;
+```
+here rabbit object inherit from animal object . that means animal is a prototype of rabbit 
+
+
+## class in the js 
+in js classes are templates for creating objects, provide cleaner and redable syntax to handle prototypal inheritance 
+```js
+
+
+
+
+
+
+```
+
+
+
+
+##Promises in the js 
+promises represent a future values . status of promises are Pending , FUllfiled and Rejected 
+
+```js
+//syntax of promises in js 
+const variable=new Promise((resolve,reject)=>{
+    // here we kept async operations 
+})
+
+//example 
+const fristPromise= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("hello baby")
+    },2000)
+})
+//consuming promise /using promise 
+
+fristPromise()
+.then((result)=>{
+    console.log(result)
+})
+.catch((err)=>{
+    console.log(err)
+})
+
+//
+
+
+
+```
+promise methods ..
+1.  promise.all() 
+    if one promise fail all will fail 
+2.  promise.allSetteld()
+    no effect if any fail
+3.  promise.race()
+    frist responce strategy . slowapi fastapi determined 
+4.  promise.any() 
+    reject only if all fails 
+
+## callback hell problem in js 
+```js
+//callback is a function passed to another function to be called leter 
+ //before callback 
+
+ function fetchdata(callback){
+    setTimeout(()=>{
+        callback("data reccived")
+    })
+ }
+
+ fetchdata(result=>{
+    console.log(result)
+ })
+
+
+// callbackhell occures when one async operation depends on another async opration 
+
+//example 
+
+getUser(id, function (user) { //get user 
+  getOrders(user.id, function (orders) { // from user get orders
+    getPayment(orders[0].id, function (payment) { // from orders get payment 
+      sendReceipt(payment, function () { //from payment send recipt 
+        console.log("Done");
+      });
+    });
+  });
+});
+```
+this is the example of callback we can solve it using various method like a async await ,promises
+
+```js
+//professional and clenest way to solve this problem is sync/await
+
+async function processOrder(){
+    try{
+        const user= await getuser(id)
+        const order=await getorder(user.id)
+        const payment=await getpayment(order[0].id)
+        await sendrecipt(payment)
+        console.log("order completed !!!!")
+    }
+    catch(error){
+        console.error(error)
+    }
+}
+```
