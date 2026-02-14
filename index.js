@@ -236,17 +236,19 @@
 
 
 
-const fristPromise= new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve("hello baby")
-    },2000)
-})
-//consuming promise /using promise 
+// const fristPromise= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("hello baby")
+//     },2000)
+// })
+// //consuming promise /using promise 
 
-fristPromise
-.then((result)=>{
-    console.log(result)
-})
-.catch((err)=>{
-    console.log(err)
-})
+// fristPromise
+// .then((result)=>{
+//     console.log(result)
+// })
+// .catch((err)=>{
+//     console.log(err)
+// })
+
+

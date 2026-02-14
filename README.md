@@ -398,7 +398,251 @@ in js classes are templates for creating objects, provide cleaner and redable sy
 
 
 
-##Promises in the js 
+
+
+# Dom start here
+
+
+
+
+
+
+ # DOM Manipulation from Basic to Advanced
+
+DOM (Document Object Model) manipulation allows JavaScript to dynamically interact with HTML elements.  
+Using DOM methods, we can select elements, modify content, change styles, handle events, and create fully interactive web applications.
+
+---
+
+## 📌 What is the DOM?
+
+When a webpage loads, the browser converts HTML into a structured tree of objects called the **DOM**.  
+JavaScript can access and modify this structure in real-time.
+
+Example HTML:
+
+```html
+<h1 id="title">Hello</h1>
+```
+
+JavaScript can modify it dynamically:
+
+```js
+document.getElementById("title").innerText = "Welcome";
+```
+
+---
+
+# 🟢 1. Selecting Elements
+
+Selecting elements is the first and most important step in DOM manipulation.
+
+```js
+// Selection by ID (returns a single element)
+let heading = document.getElementById("title");
+
+// Selection by Class Name (returns HTMLCollection)
+let items = document.getElementsByClassName("iitem");
+
+// Selection by Tag Name (returns HTMLCollection)
+let paragraphs = document.getElementsByTagName("p");
+
+// Query Selector (returns first matching element)
+let firstItem = document.querySelector(".iitem");
+
+// Query Selector All (returns NodeList of all matches)
+let allItems = document.querySelectorAll(".iitem");
+```
+
+### ✅ Best Practice:
+Use `querySelector()` and `querySelectorAll()` for modern development.
+
+---
+
+# 🟢 2. Changing Content
+
+You can dynamically update text and HTML content.
+
+```js
+// Update visible text
+heading.innerText = "Hello World";
+
+// Insert HTML content
+heading.innerHTML = "<b>Hello World</b>";
+
+// Update text safely (recommended when not using HTML)
+heading.textContent = "Updated Text";
+```
+
+### 🔎 Difference:
+- `innerText` → respects CSS styling
+- `innerHTML` → parses HTML
+- `textContent` → safest and fastest for text-only updates
+
+---
+
+# 🟢 3. Changing Styles
+
+### Inline Styles
+
+```js
+heading.style.color = "red";
+heading.style.backgroundColor = "black";
+```
+
+### Using classList (Recommended)
+
+```js
+heading.classList.add("active");
+heading.classList.remove("hidden");
+heading.classList.toggle("dark-mode");
+```
+
+### ✅ Why use classList?
+It keeps styling inside CSS and makes code cleaner.
+
+---
+
+# 🟢 4. Working with Attributes
+
+Attributes like `id`, `src`, `href`, and `disabled` can be controlled using JavaScript.
+
+```js
+// Set attribute
+heading.setAttribute("id", "newTitle");
+
+// Get attribute value
+let idValue = heading.getAttribute("id");
+
+// Remove attribute
+heading.removeAttribute("id");
+```
+
+---
+
+# 🟢 5. Creating and Removing Elements
+
+Dynamic element creation is useful for todo apps, chat apps, dashboards, etc.
+
+```js
+// Create new element
+let newItem = document.createElement("li");
+
+// Add content
+newItem.textContent = "New List Item";
+
+// Append to parent
+document.querySelector("ul").appendChild(newItem);
+
+// Remove element
+newItem.remove();
+```
+
+---
+
+# 🟡 6. Event Handling
+
+Events allow user interaction.
+
+```js
+let button = document.querySelector("button");
+
+button.addEventListener("click", function() {
+  console.log("Button Clicked");
+});
+```
+
+### Common Events:
+- click
+- input
+- submit
+- change
+- keydown
+- mouseover
+
+---
+
+# 🟡 7. Event Delegation
+
+Instead of adding events to multiple child elements, attach one event to the parent.
+
+```js
+let ul = document.querySelector("ul");
+
+ul.addEventListener("click", function(e) {
+  if (e.target.tagName === "LI") {
+    console.log("List Item Clicked");
+  }
+});
+```
+
+### ✅ Benefits:
+- Better performance
+- Works for dynamically added elements
+
+---
+
+# 🟡 8. Form Handling
+
+Forms are a common real-world use case.
+
+```js
+let form = document.querySelector("form");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent page reload
+  
+  let inputValue = document.querySelector("input").value;
+  console.log(inputValue);
+});
+```
+
+---
+
+# 🔴 9. Advanced Concepts
+
+## Debounce
+
+Used to limit how often a function executes (useful for search inputs).
+
+```js
+function debounce(fn, delay) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+```
+
+---
+
+## Throttle
+
+Ensures a function runs at most once in a specified time interval.
+
+```js
+function throttle(fn, limit) {
+  let waiting = false;
+  return function(...args) {
+    if (!waiting) {
+      fn.apply(this, args);
+      waiting = true;
+      setTimeout(() => waiting = false, limit);
+    }
+  };
+}
+```
+
+---
+
+
+
+
+
+# 😉Promises in the js 
 promises represent a future values . status of promises are Pending , FUllfiled and Rejected 
 
 ```js
@@ -468,7 +712,7 @@ getUser(id, function (user) { //get user
   });
 });
 ```
-this is the example of callback we can solve it using various method like a async await ,promises
+this is the example of callbackhell we can solve it using various method like a async await ,promises
 
 ```js
 //professional and clenest way to solve this problem is sync/await
